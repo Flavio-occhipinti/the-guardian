@@ -1,0 +1,13 @@
+@import "src/shared/styles/variables";
+
+.article-item-list {
+  height: 30px;
+  border-bottom: 1px solid #f1f1f1;
+  cursor: pointer;
+  td {
+    padding: 10px;
+  }
+  &:hover {
+    background: #ddd;
+  }
+}

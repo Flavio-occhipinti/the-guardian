@@ -1,0 +1,30 @@
+.article-modal {
+  .title {
+    font-size: 1.125rem;
+    text-align: center;
+    color: #454545;
+    font-weight: 600;
+    font-variant: small-caps;
+    margin-bottom: 20px;
+  }
+  .info-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    & > * {
+      width: 50%;
+      min-width: 200px;
+      margin-bottom: 15px;
+      white-space: nowrap;
+      &.right {
+        text-align: right;
+      }
+    }
+    span {
+      font-weight: 600;
+      margin-right: 15px;
+    }
+  }
+}

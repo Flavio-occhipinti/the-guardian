@@ -1,0 +1,35 @@
+@import "src/shared/styles/variables";
+
+.table-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  box-shadow: 2px 3px 7px 3px $box-shadow-color;
+  .pagination {
+    display: flex;
+    margin: 0;
+    padding: 10px;
+
+    & > * {
+      display: flex;
+      margin-left: 10px;
+      box-shadow: 0px 1px 4px #00000061;
+      cursor: pointer;
+      background: #fff;
+      border-radius: 5px;
+      a {
+        padding: 3px 5px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .active {
+      background: $main-color;
+      color: #fff;
+      cursor: inherit;
+    }
+  }
+}

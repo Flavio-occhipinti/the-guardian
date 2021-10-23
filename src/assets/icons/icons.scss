@@ -1,0 +1,62 @@
+@function unicode($str) {
+  @return unquote('"\\#{$str}"');
+}
+
+.icon-arrow::before {
+  content: unicode(e900);
+}
+
+.icon-close::before {
+  content: unicode(e901);
+}
+.icon-arrow-down::before {
+  content: unicode(e902);
+}
+.icon-three-dots::before {
+  content: unicode(e903);
+}
+.icon-search::before {
+  content: unicode(e986);
+}
+.icon-plus::before {
+  content: unicode(e904);
+}
+.icon-alert::before {
+  content: unicode(e905);
+}
+.icon-linkedin::before {
+  content: unicode(e906);
+}
+.icon-facebook::before {
+  content: unicode(e907);
+}
+.icon-phone::before {
+  content: unicode(e908);
+}
+.icon-at::before {
+  content: unicode(e90b);
+}
+.icon-business::before {
+  content: unicode(e909);
+}
+.icon-menu::before {
+  content: unicode(e90a);
+}
+.icon-pencil::before {
+  content: unicode(e90c);
+}
+.icon-filter::before {
+  content: unicode(ea5b);
+}
+.icon-cart::before {
+  content: unicode(e93a);
+}
+.icon-arrow-right::before {
+  content: unicode(e90d);
+}
+.icon-arrow-left::before {
+  content: unicode(e90e);
+}
+.icon-external-link::before {
+  content: unicode(ea7d);
+}
