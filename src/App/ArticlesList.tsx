@@ -1,6 +1,5 @@
 import Guardian from "guardian-js";
-import { useState } from "hoist-non-react-statics/node_modules/@types/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { Store } from "../shared/types/store";
 import { getSearch } from "../store/actions";
@@ -8,8 +7,10 @@ import "./ArticlesList.scss";
 import ArticleItemList from "./ArticlesList/ArticleItemList";
 import TableFooter from "./ArticlesList/TableFooter";
 
-const guardian = new Guardian("e3b4abec-95cf-4732-a2b1-63aa6b35f080", false);
-
+const guardian = new Guardian(
+  "e3b4abec-95cf-4732-a2b1-63aa6b35f080",
+  process.env.NODE_ENV === "production"
+);
 type Props = {};
 export default function ArticlesList({}: Props) {
   const { currentPage, pages, results, total } = useSelector(
@@ -49,13 +50,15 @@ export default function ArticlesList({}: Props) {
         </thead>
         <tbody>
           {error ? (
+            <tr>
+              <td colSpan={4} className="error-line">
+                Server not responding
+              </td>
+            </tr>
+          ) : (
             results?.map((item: any) => (
               <ArticleItemList key={item.id} article={item} />
             ))
-          ) : (
-            <tr>
-              <td colSpan={4}>Server not responding</td>
-            </tr>
           )}
         </tbody>
       </table>
