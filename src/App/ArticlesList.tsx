@@ -25,6 +25,7 @@ export default function ArticlesList({}: Props) {
       })) as any;
       const { response } = JSON.parse(body);
       getSearch(response);
+      setError(false);
     } catch (e) {
       setError(true);
     }
